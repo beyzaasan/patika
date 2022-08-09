@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class KuvvetBulma {
+    public static void main(String[] args) {
+        int a;
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Kaça kadar:");
+        a = scan.nextInt();
+      
+        System.out.println("4'ün Katlari:");
+        for (int i = 1; i <= a; i *= 4) {
+            System.out.println(i);
+        }
+
+        System.out.println("5'in Katlari:");
+        for (int i = 1; i <= a; i *= 5) {
+            System.out.println(i);
+        }
+        
+    }
+}
