@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class kullaniciGirisi {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Kullanıcı adınız: ");
+		String ad=scan.nextLine();
+		
+		System.out.println("Şifreniz: ");
+		String sifre=scan.nextLine();
+		
+		if(ad.equals("patika") && sifre.equals("1234")) {
+			System.out.println("Giriş başarılı!");
+		}
+		else {
+			int i=0;
+				while(i<4) {
+					System.out.println("Yeniden deneyiniz.");
+					String deneme=scan.nextLine();
+					i++;
+				
+				}
+					System.out.println("Şifrenizi sıfırlamak ister misiniz?");
+					System.out.println("1-Evet\n2-Hayır");
+					int yanit=scan.nextInt();
+					scan.nextLine();
+					switch(yanit) {
+					case 1:
+						System.out.println("Lütfen yeni şifrenizi giriniz.");
+						String yeniSifre=scan.nextLine();
+						if(yeniSifre.equals("1234")) {
+							System.out.println("Şifre oluşturulamadı, lütfen başka şifre giriniz.");
+						}
+						else {
+							System.out.println("Şifre oluşturuldu.");
+						}
+						break;
+					case 2: 
+						System.out.println("bye.");
+					}
+		}
+	}
+
+}
