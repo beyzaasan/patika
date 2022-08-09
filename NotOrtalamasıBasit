@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class NotOrtalamasıBasit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in)
+				;
+		int mat, fizik, kimya, turkce, tarih, muzik;
+		
+		System.out.println("Merhaba, not ortalamsı programına hoş geldiniz!");
+		
+		System.out.println("Lütfen matematik notunuzu giriniz: ");
+		mat=scan.nextInt();
+		
+		System.out.println("Lütfen fizik notunuzu giriniz: ");
+		fizik=scan.nextInt();
+		
+		System.out.println("Lütfen kimya notunuzu giriniz: ");
+		kimya=scan.nextInt();
+		
+		System.out.println("Lütfen turkce notunuzu giriniz: ");
+		turkce=scan.nextInt();
+		
+		System.out.println("Lütfen tarih notunuzu giriniz: ");
+		tarih=scan.nextInt();
+		
+		System.out.println("Lütfen muzik notunuzu giriniz: ");
+		muzik=scan.nextInt();
+		
+		int toplam = (mat + fizik + kimya + turkce + tarih + muzik);
+		double ort = toplam/6;
+		 String sonuc = ort>=60 ? "sınıfı geçti" : "sınıfta kaldı";
+		 System.out.println("Öğrencinizin not ortalaması: "+ ort + " \nÖğrenci "+ sonuc +".");
+		
+	}
+
+}
