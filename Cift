@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class cift {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Sayı giriniz: ");
+		int sayı=scan.nextInt();
+		int a=0,toplam=0,i=0;
+		
+		while(a<sayı) {
+			a++;
+			if(a%4==0 && a%3==0) {
+				toplam+=a;
+				i++;
+			}
+			else
+				continue;
+			
+		}
+		int ort=toplam/i;
+		System.out.println(toplam);
+		System.out.println(ort);
+	}
+
+}
