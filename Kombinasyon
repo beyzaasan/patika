@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class kombinasyon {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan= new Scanner(System.in)
+;		
+		System.out.println("n'yi girin: ");
+		int n=scan.nextInt();
+		System.out.println("r'yi giriniz: ");
+		int r=scan.nextInt();
+		int sonuc1=1,sonuc2=1,sonuc3=1;
+		
+		for(int index=1;index<=n;index++) {
+			sonuc1*=index;
+		}
+		for(int index=1;index<=r;index++) {
+			sonuc2*=index;
+		}
+		int cikarma=(n-r),index=1;
+		if(n>=r) {
+			for(int i=1;i<=cikarma;i++) {
+				sonuc3*=i;
+			}
+		}
+		else {
+			System.out.println("geçersiz değerler");
+		}
+		int formul=sonuc1/(sonuc2*sonuc3);
+		System.out.println(formul);
+	}
+
+}
