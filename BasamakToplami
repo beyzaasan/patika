@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class basamakToplami {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+		int sayi,basamakDegeri,basamakSayisi=0;
+		System.out.println("Basamaklarını toplamak istediğiniz sayıyı giriniz.");
+		sayi=scan.nextInt();
+		int tempNumber=sayi;
+		while(tempNumber!=0) {
+			basamakSayisi++;
+			tempNumber/=10;
+		}
+		int[] basamak = new int[basamakSayisi];
+		int i,toplam=0;
+		tempNumber=sayi;
+		while(tempNumber!=0) {
+			for(i=0;i<basamakSayisi;i++) {
+			basamakDegeri=tempNumber%10;
+			basamak[i]=basamakDegeri;
+			toplam+=basamak[i];
+			tempNumber/=10;
+			}
+		}
+	
+		System.out.println(toplam);
+	
+	}
+
+}
